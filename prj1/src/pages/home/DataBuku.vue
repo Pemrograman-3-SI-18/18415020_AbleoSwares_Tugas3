@@ -10,7 +10,7 @@
     >
 
       <template v-slot:top>
-        <q-btn color="primary" :disable="loading" label="Tambah Data Buku"/>
+        <q-btn color="primary" :disable="loading" label="Tambah Data Buku" to="/inputdatabuku"/>
         <!-- <q-btn class="q-ml-sm" color="primary" :disable="loading" label="Remove row" @click="removeRow" /> -->
         <q-space />
         <q-input borderless dense debounce="300" color="primary" v-model="filter">
