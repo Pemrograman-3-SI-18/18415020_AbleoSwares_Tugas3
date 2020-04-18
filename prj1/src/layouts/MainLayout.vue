@@ -67,7 +67,7 @@
           >
             Master Buku
           </q-item-label>
-          <q-item clickable active-class="active" exact v-ripple to="/databuku">
+          <q-item clickable active-class="active" exact v-ripple to="/">
             <q-item-section avatar>
               <q-icon name="table_chart" />
             </q-item-section>

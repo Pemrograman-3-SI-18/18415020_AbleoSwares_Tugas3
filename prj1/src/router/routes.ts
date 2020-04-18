@@ -4,7 +4,7 @@ const routes: RouteConfig[] = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '/databuku', component: () => import('pages/home/DataBuku.vue') },
+    children: [{ path: '/', component: () => import('pages/home/DataBuku.vue') },
       { path: '/inputdatabuku', component: () => import('pages/home/InputDataBuku.vue') }]
   },
 
