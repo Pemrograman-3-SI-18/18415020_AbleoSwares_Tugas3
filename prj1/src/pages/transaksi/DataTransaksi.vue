@@ -36,38 +36,38 @@ export default {
         {
           name: 'desc',
           required: true,
-          label: 'Kode Buku',
+          label: 'Kode Transaksi',
           align: 'left',
-          field: row => row.kodeBuku,
+          field: row => row.kodeTransaksi,
           format: val => `${val}`,
           sortable: true
         },
+        { name: 'namaPembeli', align: 'center', label: 'Nama Pembeli', field: 'namaPembeli', sortable: true },
         { name: 'judulBuku', align: 'center', label: 'Judul Buku', field: 'judulBuku', sortable: true },
-        { name: 'penerbit', align: 'center', label: 'Penerbit', field: 'penerbit', sortable: true },
-        { name: 'pengarang', align: 'center', label: 'Pengarang', field: 'pengarang' },
-        { name: 'tahunTerbit', align: 'center', label: 'Tahun Terbit', field: 'tahunTerbit' }
+        { name: 'harga', align: 'center', label: 'Harga', field: 'harga' },
+        { name: 'total', align: 'center', label: 'Total Pembelian', field: 'total' }
       ],
       data: [
         {
-          kodeBuku: 'K001',
-          judulBuku: 'Berkata Saja',
-          penerbit: 'Dunia Buku',
-          pengarang: 'Abelo',
-          tahunTerbit: '2019'
-        },
-        {
-          kodeBuku: 'K002',
+          kodeTransaksi: 'K001',
+          namaPembeli: 'Dwi Novendra',
           judulBuku: 'Pertemuan',
-          penerbit: 'Dunia Buku',
-          pengarang: 'Abelo',
-          tahunTerbit: '2018'
+          harga: 'Rp.100.0000',
+          total: '1'
         },
         {
-          kodeBuku: 'K003',
+          kodeTransaksi: 'K001',
+          namaPembeli: 'Roby Ortega',
+          judulBuku: 'Berkata Saja',
+          harga: 'Rp.100.0000',
+          total: '1'
+        },
+        {
+          kodeTransaksi: 'K001',
+          namaPembeli: 'Yoga Saputra',
           judulBuku: 'Mungkin',
-          penerbit: 'Dunia Buku',
-          pengarang: 'Abelo',
-          tahunTerbit: '2017'
+          harga: 'Rp.200.0000',
+          total: '2'
         }
       ]
     }

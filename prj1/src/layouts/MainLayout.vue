@@ -67,7 +67,7 @@
           >
             Master Buku
           </q-item-label>
-          <q-item clickable active-class="active" exact v-ripple to="/">
+          <q-item clickable active-class="active" exact v-ripple to="/databuku">
             <q-item-section avatar>
               <q-icon name="table_chart" />
             </q-item-section>
@@ -84,6 +84,22 @@
               Input Buku
             </q-item-section>
           </q-item>
+
+           <q-item-label
+            header
+            class="text-grey-8"
+          >
+            Transaksi
+          </q-item-label>
+            <q-item clickable active-class="active" exact v-ripple to="/datatransaksi">
+            <q-item-section avatar>
+              <q-icon name="attach_money" />
+            </q-item-section>
+            <q-item-section>
+           Data Transaksi
+            </q-item-section>
+          </q-item>
+
         </q-list>
       </q-scroll-area>
     </q-drawer>
