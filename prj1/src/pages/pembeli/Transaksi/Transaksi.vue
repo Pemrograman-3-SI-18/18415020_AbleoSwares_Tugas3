@@ -1,7 +1,8 @@
 <template>
+<q-page>
  <div class="q-pa-md">
     <q-table
-      title="Treats"
+      title="`Treats"
       :data="data"
       :columns="columns"
       row-key="id"
@@ -10,7 +11,9 @@
     >
 
       <template v-slot:top>
-        <q-btn color="primary" :disable="loading" label="Tambah Data Buku" to="/inputdatabuku"/>
+        <span class="text-h5 text-weight-light q-pa-md">
+        <span class="text-blue-grey-14">Data Transaksi</span>
+        </span>
         <!-- <q-btn class="q-ml-sm" color="primary" :disable="loading" label="Remove row" @click="removeRow" /> -->
         <q-space />
         <q-input borderless dense debounce="300" color="primary" v-model="filter">
@@ -22,7 +25,7 @@
 
     </q-table>
   </div>
-
+</q-page>
 </template>
 
 <script>
@@ -36,38 +39,38 @@ export default {
         {
           name: 'desc',
           required: true,
-          label: 'Kode Buku',
+          label: 'Kode Transaksi',
           align: 'left',
-          field: row => row.kodeBuku,
+          field: row => row.kodeTransaksi,
           format: val => `${val}`,
           sortable: true
         },
+        { name: 'namaPembeli', align: 'center', label: 'Nama Pembeli', field: 'namaPembeli', sortable: true },
         { name: 'judulBuku', align: 'center', label: 'Judul Buku', field: 'judulBuku', sortable: true },
-        { name: 'penerbit', align: 'center', label: 'Penerbit', field: 'penerbit', sortable: true },
-        { name: 'pengarang', align: 'center', label: 'Pengarang', field: 'pengarang' },
-        { name: 'tahunTerbit', align: 'center', label: 'Tahun Terbit', field: 'tahunTerbit' }
+        { name: 'harga', align: 'center', label: 'Harga', field: 'harga' },
+        { name: 'total', align: 'center', label: 'Total Pembelian', field: 'total' }
       ],
       data: [
         {
-          kodeBuku: 'K001',
-          judulBuku: 'Berkata Saja',
-          penerbit: 'Dunia Buku',
-          pengarang: 'Abelo',
-          tahunTerbit: '2019'
+          kodeTransaksi: 'K001',
+          namaPembeli: 'Dwi Novendra',
+          judulBuku: 'Pemograman 3',
+          harga: 'Rp.100.000',
+          total: '1'
         },
         {
-          kodeBuku: 'K002',
-          judulBuku: 'Pertemuan',
-          penerbit: 'Dunia Buku',
-          pengarang: 'Abelo',
-          tahunTerbit: '2018'
+          kodeTransaksi: 'K002',
+          namaPembeli: 'Roby Ortega',
+          judulBuku: 'Praktek Pemrograman',
+          harga: 'Rp.250.000',
+          total: '1'
         },
         {
-          kodeBuku: 'K003',
-          judulBuku: 'Mungkin',
-          penerbit: 'Dunia Buku',
-          pengarang: 'Abelo',
-          tahunTerbit: '2017'
+          kodeTransaksi: 'K003',
+          namaPembeli: 'Yoga Saputra',
+          judulBuku: 'Pemrograman Web',
+          harga: 'Rp.200.000',
+          total: '1'
         }
       ]
     }

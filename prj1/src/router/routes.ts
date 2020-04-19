@@ -2,13 +2,18 @@ import { RouteConfig } from 'vue-router'
 
 const routes: RouteConfig[] = [
   {
-    path: '/',
+    path: '/admin',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '/databuku', component: () => import('pages/home/DataBuku.vue') },
-      { path: '/inputdatabuku', component: () => import('pages/home/InputDataBuku.vue') },
-      { path: '/datatransaksi', component: () => import('pages/transaksi/DataTransaksi.vue') }]
+    children: [{ path: '', component: () => import('pages/admin/home/DataBuku.vue') },
+      { path: 'inputdatabuku', component: () => import('pages/admin/home/InputDataBuku.vue') },
+      { path: 'datatransaksi', component: () => import('pages/admin/transaksi/DataTransaksi.vue') }]
   },
-
+  {
+    path: '/pembeli',
+    component: () => import('layouts/PembeliLayout.vue'),
+    children: [{ path: '', component: () => import('pages/pembeli/DataBuku/DataBuku.vue') },
+      { path: 'transaksi', component: () => import('pages/pembeli/Transaksi/Transaksi.vue') }]
+  },
   {
     path: '/',
     component: () => import('layouts/LoginRegisLayout.vue'),

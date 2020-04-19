@@ -65,23 +65,14 @@
             header
             class="text-grey-8"
           >
-            Master Buku
+           Data Buku
           </q-item-label>
-          <q-item clickable active-class="active" exact v-ripple to="/admin">
+          <q-item clickable active-class="active" exact v-ripple to="/pembeli">
             <q-item-section avatar>
               <q-icon name="table_chart" />
             </q-item-section>
             <q-item-section>
               Data Buku
-            </q-item-section>
-          </q-item>
-
-            <q-item clickable active-class="active" exact v-ripple to="/admin/inputdatabuku">
-            <q-item-section avatar>
-              <q-icon name="input" />
-            </q-item-section>
-            <q-item-section>
-              Input Buku
             </q-item-section>
           </q-item>
 
@@ -91,7 +82,7 @@
           >
             Transaksi
           </q-item-label>
-            <q-item clickable active-class="active" exact v-ripple to="/admin/datatransaksi">
+            <q-item clickable active-class="active" exact v-ripple to="/pembeli/transaksi">
             <q-item-section avatar>
               <q-icon name="attach_money" />
             </q-item-section>
@@ -111,7 +102,7 @@
 
 <script>
 export default {
-  name: 'MainLayout',
+  name: 'PembeliLayout',
   data () {
     return {
       left: false

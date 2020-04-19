@@ -1,7 +1,8 @@
 <template>
+<q-page>
  <div class="q-pa-md">
     <q-table
-      title="Treats"
+      title="`Treats"
       :data="data"
       :columns="columns"
       row-key="id"
@@ -10,7 +11,9 @@
     >
 
       <template v-slot:top>
-        <q-btn color="primary" :disable="loading" label="Tambah Data Buku" to="/inputdatabuku"/>
+        <span class="text-h5 text-weight-light q-pa-md">
+        <span class="text-blue-grey-14">Data Transaksi</span>
+        </span>
         <!-- <q-btn class="q-ml-sm" color="primary" :disable="loading" label="Remove row" @click="removeRow" /> -->
         <q-space />
         <q-input borderless dense debounce="300" color="primary" v-model="filter">
@@ -22,7 +25,7 @@
 
     </q-table>
   </div>
-
+</q-page>
 </template>
 
 <script>
@@ -51,23 +54,23 @@ export default {
         {
           kodeTransaksi: 'K001',
           namaPembeli: 'Dwi Novendra',
-          judulBuku: 'Pertemuan',
-          harga: 'Rp.100.0000',
+          judulBuku: 'Pemograman 3',
+          harga: 'Rp.100.000',
           total: '1'
         },
         {
-          kodeTransaksi: 'K001',
+          kodeTransaksi: 'K002',
           namaPembeli: 'Roby Ortega',
-          judulBuku: 'Berkata Saja',
-          harga: 'Rp.100.0000',
+          judulBuku: 'Praktek Pemrograman',
+          harga: 'Rp.250.000',
           total: '1'
         },
         {
-          kodeTransaksi: 'K001',
+          kodeTransaksi: 'K003',
           namaPembeli: 'Yoga Saputra',
-          judulBuku: 'Mungkin',
-          harga: 'Rp.200.0000',
-          total: '2'
+          judulBuku: 'Pemrograman Web',
+          harga: 'Rp.200.000',
+          total: '1'
         }
       ]
     }
